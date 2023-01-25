@@ -7,10 +7,15 @@
 
 import Foundation
 
-class LoginApi{
+protocol LoginProtocol{
+    func authonticateUser(currentUser : User)
+}
+
+class LoginApi: LoginProtocol{
  
     func authonticateUser(currentUser : User){
         // api code to authonticate user
+        print(" this user is printed in LoginApi class \(currentUser.userId) , \(currentUser.name)")
     }
     
 }
